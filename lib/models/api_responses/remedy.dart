@@ -22,7 +22,7 @@ class Remedy {
   final bool reminderEnabled;
 
   Remedy({
-    required this.id,
+    this.id = 0,
     required this.name,
     required this.description,
     required this.quantity,
@@ -31,9 +31,11 @@ class Remedy {
     required this.reminderEnabled,
   });
 
+  // A PK é somente-leitura no DRF (AutoField), então nunca é enviada no
+  // corpo da requisição: no create o backend gera o id; no update ele já
+  // vem na URL (PUT /remedies/<id>/).
   Map<String, dynamic> toMap() {
     return {
-      'id': id,
       'name': name,
       'description': description,
       'quantity': quantity,

@@ -70,7 +70,6 @@ class RemedyViewModel extends ChangeNotifier {
     try {
       final created = await _remedyService.addRemedy(
         Remedy(
-          id: 0,
           name: name,
           description: '',
           quantity: quantity,

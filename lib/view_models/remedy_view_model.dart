@@ -83,7 +83,7 @@ class RemedyViewModel extends ChangeNotifier {
       final created = await _remedyService.addRemedy(
         Remedy(
           name: name,
-          description: '',
+          description: '-',
           quantity: quantity,
           hour: hour,
           daysOfWeek: daysOfWeek.toList(),
@@ -113,7 +113,7 @@ class RemedyViewModel extends ChangeNotifier {
         Remedy(
           id: id,
           name: name,
-          description: '',
+          description: '-',
           quantity: quantity,
           hour: hour,
           daysOfWeek: daysOfWeek.toList(),
